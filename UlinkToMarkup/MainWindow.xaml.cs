@@ -420,18 +420,18 @@ namespace UlinkToMarkup
 
                 string markupContent = "## A curated collection of Unreal Engine learning resources semi-compiled by an utility I made." +
                     System.Environment.NewLine +
-                    "### The tool can be found here in case you are interested. [ULinkToMarkup](https://github.com/kaiyumcg/ULinkToMarkup)" +
+                    "##### The tool can be found here in case you are interested. [ULinkToMarkup](https://github.com/kaiyumcg/ULinkToMarkup)" +
                     System.Environment.NewLine +
-                    "### Last generation date(Sorted by Date): " + DateTime.Now.ToString() +
+                    "##### Last generation date(Sorted by Date): " + DateTime.Now.ToString() +
                     System.Environment.NewLine +
-                    "### Note: Only related to mainstream game development. XR/AEC/Visual production etc are not considered(for now)." +
+                    "##### Note: Only related to mainstream game development. XR/AEC/Visual production etc are not considered(for now)." +
                     System.Environment.NewLine + System.Environment.NewLine;
                 for (int i = 0; i < data.categories.Count; i++)
                 {
                     var cat = data.categories[i];
                     if (cat == null) { continue; }
                     markupContent += System.Environment.NewLine + System.Environment.NewLine + System.Environment.NewLine +
-                        "###### "+cat.categoryName;
+                        "#### "+cat.categoryName;
                     var links = cat.links;
                     if (links != null && links.Count > 0)
                     {
